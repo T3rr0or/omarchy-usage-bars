@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.t3rr0or.usage-bars",
+  "name": "Usage bars",
+  "version": "1.1.0",
+  "author": "T3rr0or",
+  "license": "MIT",
+  "description": "Two thin bars per AI agent in the Omarchy bar: session limit on top, weekly limit below, read from the Agents plugin's usage records.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Usage bars",
+    "description": "Session and weekly limit bars per agent, one color per provider.",
+    "category": "AI",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "providers": ["claude", "codex", "agy"],
+      "colors": {},
+      "barLength": 16
+    },
+    "schema": [
+      { "key": "barLength", "type": "integer", "label": "Bar length", "min": 8, "max": 23, "step": 1, "defaultValue": 16 }
+    ]
+  }
+}
